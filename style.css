@@ -1,0 +1,18 @@
+.header-img {
+  height: 700px;
+}
+
+.topBar {
+  background-color: #f2184f;
+}
+
+.nav-content a:active {
+  background-color: #f4f6fa;
+  color: #202c45;
+}
+
+@media (max-width: 480px) {
+  .header-img {
+    height: 350px;
+  }
+}
