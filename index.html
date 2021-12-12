@@ -6,24 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
-    <title>Document</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Raleway:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
 
 </head>
 
 <body>
     <div class="body">
         <!-- topBar -->
-        <div class="topBar p-2">
+        <div class="topBar">
             <div class="container mx-auto items-center">
-                <div class="sm:grid-cols-1 grid md:grid-cols-2 gap-4 text-white md:mx-5">
+                <div class="sm:grid-cols-1 grid md:grid-cols-2 gap-4 text-white">
                     <div class='flex'>
                         <div>
                             FAQ <span class='mx-3'>|</span>
@@ -35,7 +45,7 @@
                             Login <span class='mx-3'>|</span>
                         </div>
                     </div>
-                    <div class='justify-self-center'>
+                    <div class='justify-self-end'>
                         <ul class='flex'>
                             <li class='mx-3'><i class="fab fa-facebook-f"></i>
                             </li>
@@ -53,26 +63,29 @@
 
         <!-- Second TopBar -->
         <div class="container mx-auto items-center">
-            <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 md:mx-5 py-4">
+            <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 py-4">
                 <div class="logo">
                     <img src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/logo-wide.png" alt="">
                 </div>
 
-                <div class="short-contact grid grid-cols-2">
+                <div class="short-contact grid grid-cols-2 justify-self-end">
                     <div class="contact flex items-center">
-                        <div class='mr-3 text-3xl' style='color: #202C45'><i class="fas fa-phone-square-alt"></i></div>
-                        <div>
-                            <span class="text-gray-500">CALL US TODAY!</span> <br />
+                        <div class='mr-3' style='color: #202C45; font-size: 41.1429px;'><i
+                                class="fas fa-phone-square-alt"></i></div>
+                        <div class='' style='color: #333333; font-family: Open Sans; font-size: 14px'>
+                            <span class="" style="color: #808080; font-family: Open Sans; font-size: 12px">CALL US
+                                TODAY!</span> <br />
                             +(012)345 6789
                         </div>
                     </div>
 
                     <div class="available-time">
-                        <div class="office-time flex items-center">
-                            <div class='mr-3 text-3xl' style='color: #202C45'><i class="far fa-clock"></i>
+                        <div class="office-time flex items-center ml-12">
+                            <div class='mx-3' style='color: #202C45; font-size: 41.1429px'><i class="far fa-clock"></i>
                             </div>
-                            <div>
-                                <span class="text-gray-500">WE ARE OPEN!</span> <br />
+                            <div class=' ' style="color: #333333; font-family: Open Sans; font-size: 14px">
+                                <span class="" style="color: #808080; font-family: Open Sans; font-size: 12px">WE ARE
+                                    OPEN!</span> <br />
                                 Mon-Fri 8.00-16.00
                             </div>
                         </div>
@@ -82,32 +95,33 @@
         </div>
 
         <!-- Start Navbar Section -->
-        <nav class="sticky top-0 z-50" style='background-color: #202C45'>
+        <nav class="sticky top-0 z-50" style='background-color: #202C45; height: 73px'>
             <div class="container mx-auto items-center">
                 <div class="grid grid-cols-2">
-                    <div class="flex items-center">
+                    <div class="flex items-center nav-content">
                         <a href="#home"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium"
+                            aria-current="page">Home</a>
 
                         <a href="#about"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">About</a>
 
                         <a href="#courses"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Courses</a>
+                            class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">Courses</a>
 
                         <a href="#teacher"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Teacher</a>
+                            class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">Teacher</a>
 
                         <a href="#gallery"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                            class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">Gallery</a>
 
                         <a href="#blog"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                            class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">Blog</a>
 
                     </div>
 
                     <div class="booking justify-self-end">
-                        <button class="p-4 text-white rounded-none ..." style='background-color: #F2184F;'>Book
+                        <button class="px-5 py-6 text-white rounded-none ..." style='background-color: #F2184F;'>Book
                             Now</button>
                     </div>
                 </div>
@@ -115,210 +129,492 @@
         </nav>
 
         <!-- Start header section -->
-        <header>
-            <div id='home' class="swiper mySwiper">
+        <!-- Slider main container -->
+        <div class="header">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="object-cover w-full header-img" src="img/bg-1.jpg" alt="image" />
+                    <!-- Slides 1-->
+                    <div class="swiper-slide" style="background-image: url(img/bg-1.jpg);">
+                        <div class="container mx-auto">
+                            <div class="text-center text-white">
+                                <p class="lg:text-2xl md: text-xl rounded-full w-1/3 mx-auto py-2 md:text-base sm:text-sm xs: text-xs"
+                                    style='background-color: #000000a6; border-left: 4px solid #F2184F; border-right: 4px solid #F2184F;'>
+                                    FEED YOUR
+                                    KNOWLEDGE</p>
+                                <p class="lg:text-4xl font-bold rounded-full w-1/2 mx-auto my-4 py-3 md:text-base sm:text-sm xs: text-xs"
+                                    style='background-color: #202c45b7; font-family: Raleway;'>WORLD'S BEST
+                                    UNIVERSITY
+                                </p>
+                                <p class="text-lg w-2/3 mx-auto font-medium md:text-base sm:text-sm xs:text-xs">We
+                                    provides
+                                    always our best services for our
+                                    clients and
+                                    always try
+                                    to
+                                    achieve our
+                                    client's trust
+                                    and satisfaction.
+                                </p>
+
+                                <button
+                                    class="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-1 px-4 border border-white hover:border-transparent rounded-full text-base font-normal">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <img class="object-cover w-full header-img" src="img/bg-2.jpg" alt="image" />
+                    <!-- Slides 2-->
+                    <div class="swiper-slide" style="background-image: url(img/bg-2.jpg);">
+                        <div class="container">
+                            <div class="text-center text-white relative mb-64">
+                                <p class="lg:text-2xl md: text-xl w-1/3 absolute right-0 py-2 md:text-base sm:text-sm xs:text-xs"
+                                    style='background-color: #000000a6; border-right: 4px solid #F2184F;'>
+                                    FEED YOUR
+                                    KNOWLEDGE</p>
+                                <p class="text-4xl font-bold w-1/2 absolute right-0 md:my-16 sm:mt-12 py-3 md:text-base sm:text-sm xs: text-sm"
+                                    style='background-color: #202c45b7;'>
+                                    WORLD'S BEST
+                                    UNIVERSITY
+                                </p>
+                                <p class="text-lg w-2/3 font-medium absolute right-0 text-right mt-32">We provides
+                                    always
+                                    our best
+                                    services
+                                    for our
+                                    clients and
+                                    always try
+                                    to
+                                    achieve our
+                                    client's trust
+                                    and satisfaction.
+                                </p>
+
+                                <button
+                                    class="bg-transparent hover:bg-slate-600 text-white font-semibold hover:text-white py-2 px-4 hover:border-transparent text-base font-normal absolute right-0 mt-48"
+                                    style='background-color: #000000a6; border-right: 4px solid #F2184F;'>
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <img class="object-cover w-full header-img" src="img/bg-3.jpg" alt="image" />
+                    <!-- Slides 3 -->
+                    <div class="swiper-slide" style="background-image: url(img/bg-3.jpg);">
+                        <div class="container">
+                            <div class="text-center text-white">
+                                <p class="lg:text-2xl md: text-xl w-1/3 py-2 md:text-base sm:text-sm xs: text-xs"
+                                    style='background-color: #000000a6; border-right: 4px solid #F2184F;'>
+                                    FEED YOUR
+                                    KNOWLEDGE</p>
+                                <p class="text-4xl font-bold w-1/2 my-4 py-3 md:text-base sm:text-sm xs: text-xs"
+                                    style='background-color: #202c45b7;'>
+                                    WORLD'S BEST
+                                    UNIVERSITY
+                                </p>
+                                <p class="text-lg w-2/3 font-medium text-left mt-5">We provides always
+                                    our best
+                                    services
+                                    for our
+                                    clients and
+                                    always try
+                                    to
+                                    achieve our
+                                    client's trust
+                                    and satisfaction.
+                                </p>
+
+                                <button
+                                    class="bg-transparent hover:bg-slate-600 text-white font-semibold hover:text-white py-2 px-4 hover:border-transparent text-base font-normal"
+                                    style='background-color: #000000a6; border-left: 4px solid #F2184F;'>
+                                    View Detials
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                    ...
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
-            </div>
 
-            <!-- Swiper JS for slider -->
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-            <script>
-                var swiper = new Swiper(".mySwiper", {
-                    cssMode: true,
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                    },
-                    mousewheel: true,
-                    keyboard: true,
-                });
-            </script>
-        </header>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+        <script>
+            var swiper = new Swiper('.swiper', {
+                // Optional parameters
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        </script>
+
+
 
         <!-- Start About section -->
-        <section id='about' class='container mx-auto'>
-            <h1 class='text-center font-bold mt-10 pt-20 text-2xl text-gray-600'>ABOUT US</h1>
+        <section id='about' class='container mx-auto '>
+            <h1 class='text-center font-bold mt-10 pt-20 text-2xl text-gray-600'></h1>
 
-            <h2 class='font-semibold text-lg'>THE WORLD'S BEST EDUCATION IN OUR UNIVERSITY</h2>
-            <p>We are Developer. An online learning community</p>
+            <div class="container grid md:grid-cols-2 sm:grid-cols-1 mx-2">
+                <div class="about" style="padding: 0px 15px">
+                    <p class="text-gray-400 font-normal" style='font-size: 12px; color: #A9A9A9; letter-spacing: 6px;'>
+                        ALL ABOUT</p>
+                    <h2 class='font-semibold w-4/5'
+                        style='font-size: 32px; color: #333333; margin: 0px 0px 30px; padding: 0px 0px 10px'>THE
+                        WORLD'S
+                        BEST EDUCATION
+                        IN OUR UNIVERSITY
+                        <hr class='w-1/12' style='color: red'>
+                    </h2>
+                    <p class='my-5' style='font-size: 18px; color: #202C45'>We are Developer. An online learning
+                        community. We make awesome awesome website for our company.</p>
+                    <p class='' style='color: #666666; font-size: 14px; margin: 0px 0px 10px'>Here, we believe
+                        everyone should
+                        have the opportunity to create progress through technology and
+                        develop
+                        the skills of
+                        tomorrow. With assessments, learning paths and courses authored by industry experts. Here, we
+                        believe
+                        everyone should have the opportunity to create progress through technology and develop
+                        the skills of
+                        tomorrow. With assessments, learning paths and courses authored by industry experts.
+                    </p>
 
-            <p>Here, we believe everyone should have the opportunity to create progress through technology and develop
-                the skills of
-                tomorrow. With assessments, learning paths and courses authored by industry experts. Here, we believe
-                everyone should have the opportunity to create progress through technology and develop
-                the skills of
-                tomorrow. With assessments, learning paths and courses authored by industry experts.Here, we believe
-                everyone should have the opportunity to create progress through technology and develop
-                the skills of
-                tomorrow. With assessments, learning paths and courses authored by industry experts.
-            </p>
+                    <button class=""
+                        style='background-color: #202C45; color: white; margin: 10px 0px 0px; padding: 10px 26px'>
+                        Know More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
 
-            <button class="rounded-full ...">Know More...</button>
-
-            <div class="orientation content-center">
-                <iframe class="container mx-auto" width="560" height="315"
-                    src="https://www.youtube.com/embed/Sv_GmUQebao?start=294" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <div class="orientation content-center" style='padding: 0px 15px'>
+                    <iframe class="container mx-auto w-5/5" height="315"
+                        src="https://www.youtube.com/embed/Sv_GmUQebao?start=294" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
             </div>
         </section>
 
         <!-- Start course section -->
-        <section id="courses">
-            <h1 class='text-center font-bold mt-6 text-2xl text-gray-600 my-6 mt-10 pt-20'>OUR COURSES</h1>
-
-            <div class="grid md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-1">
-                <!--Card 1-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-3">
-                    <img class="w-full" src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/7.jpg"
-                        alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis
-                            eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
+        <section id="courses" class='py-10 mt-20 bg-slate-100'>
+            <div class="container mx-auto">
+                <div class="mx-5">
+                    <h1 class='' style='font-size:24px;'>OUR <span style="color: red">COURSES</span></h1>
+                    <hr class='w-1/12' style='color: red'>
                 </div>
+                <div class="carousel mx-auto">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper py-8">
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/7.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-5" style='font-size: 18px; color:#333333'>Electrical
+                                                &
+                                                Electronic</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Card 2 -->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-3">
-                    <img class="w-full" src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/6.jpg"
-                        alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis
-                            eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
-                </div>
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/8.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-5" style='font-size: 18px; color:#333333'>Chemical
+                                                Engineering</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
 
-                <!-- Card 3 -->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-3">
-                    <img class="w-full" src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/5.jpg"
-                        alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis
-                            eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
-                </div>
+                                </div>
+                            </div>
 
-                <!--Card 4-->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-3">
-                    <img class="w-full" src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/8.jpg"
-                        alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis
-                            eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
-                </div>
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/4.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-2" style='font-size: 18px; color:#333333'>Accounting
+                                                Technologies</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Card 5 -->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-3">
-                    <img class="w-full" src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/4.jpg"
-                        alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis
-                            eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
-                </div>
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/5.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-2" style='font-size: 18px; color:#333333'>Computer
+                                                Technologies</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Card 6 -->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-3">
-                    <img class="w-full" src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/7.jpg"
-                        alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis
-                            eaque, exercitationem praesentium nihil.
-                        </p>
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/6.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-5" style='font-size: 18px; color:#333333'>Development
+                                                Studies
+                                            </div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/7.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-5" style='font-size: 18px; color:#333333'>Electrical
+                                                &
+                                                Electronic</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/8.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-5" style='font-size: 18px; color:#333333'>Chemical
+                                                Engineering</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/4.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-2" style='font-size: 18px; color:#333333'>Accounting
+                                                Technologies</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                                    <img class="w-full"
+                                        src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/5.jpg"
+                                        alt="Sunset in the mountains">
+                                    <div class="bg-white">
+                                        <div class="px-6 py-4">
+                                            <div class="text-xl py-2" style='font-size: 18px; color:#333333'>Computer
+                                                Technologies</div>
+                                            <hr class='w-1/4' style='color: red'>
+                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                                quia,
+                                                nulla! Maiores
+                                                et perferendis
+                                                eaque, exercitationem praesentium nihil.
+                                            </p>
+                                        </div>
+                                        <div class="px-6 pt-4 pb-2">
+                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                                VIEW DETAILS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                        <span
-                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
+
+                    <!-- Swiper JS -->
+                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper(".mySwiper", {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                            slidesPerGroup: 3,
+                            loop: true,
+                            loopFillGroupWithBlank: true,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                        });
+                    </script>
                 </div>
             </div>
+
         </section>
 
         <!-- Start Review Section -->
