@@ -1,0 +1,24 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "tailwindcss": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tailwindcss build "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumon6638-sm/devXhub_university.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumon6638-sm/devXhub_university/issues"
+  },
+  "homepage": "https://github.com/sumon6638-sm/devXhub_university#readme"
+}
