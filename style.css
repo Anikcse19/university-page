@@ -80,9 +80,6 @@
   object-fit: cover;
 }
 
-.single-item {
-}
-
 .single-item:hover .img-overlay {
   top: 0;
 }
