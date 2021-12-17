@@ -31,8 +31,8 @@
 <body>
     <div class="body">
         <!-- topBar -->
-        <div class="topBar">
-            <div class="container mx-auto items-center">
+        <div id='home' class="topBar bg-[#F2184F]">
+            <div class="2xl:px-36 mx-auto container items-center">
                 <div class="grid-cols-1 grid lg:grid-cols-2 gap-4 text-white md:px-14 py-3 text-sm">
                     <div class='flex lg:justify-self-start justify-self-center'>
                         <div>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-col-4 justify-self-end lg:block hidden">
+                    <div class="grid grid-col-4 lg:justify-self-end justify-self-center">
                         <ul class='flex'>
                             <li class='mx-3'><i class="fab fa-facebook-f"></i>
                             </li>
@@ -54,13 +54,13 @@
                             <li class='mx-3'><i class="fab fa-google-plus-g"></i></li>
                             <li class='mx-3'><i class="fab fa-instagram-square"></i></li>
                             <li class='mx-3'><i class="fab fa-linkedin-in"></i></li>
-                            <li id='cart-btn1' class='mx-3'><i class="fas fa-shopping-cart"></i>(12)</li>
-                            <li id='search-btn1' class='mx-3 cursor-pointer search-icon'><i class="fas fa-search"></i>
+                            <li id='cart-btn' class='mx-3'><i class="fas fa-shopping-cart"></i>(12)</li>
+                            <li id='search-btn' class='mx-3 cursor-pointer search-icon'><i class="fas fa-search"></i>
                             </li>
                         </ul>
                     </div>
 
-                    <div
+                    <!-- <div
                         class='md:justify-self-stretch md:justify-self-center justify-self-stretch md:grid md:grid-cols-4 md:text-sm lg:text-base md:ml-11 lg:ml-0 grid grid-cols-3 lg:mx-0 mx-3 lg:hidden block'>
                         <div
                             class="md:col-span-3 col-span-2 lg:justify-self-end md:justify-self-center justify-self-start">
@@ -82,13 +82,13 @@
                                         class="fas fa-search"></i></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <!-- Show Cart Item -->
-        <div id="cart-display" class="hidden justify-end">
+        <div id="cart-display" class="hidden xl:mr-80 justify-end">
             <div class="cart-box shadow-lg absolute" style="z-index: 60; background-color: white;">
                 <div class="grid grid-cols-5 my-3">
                     <div>
@@ -177,72 +177,46 @@
 
         <!-- Search Box -->
         <div id="search-display" class="hidden justify-end">
-            <div class="search-box shadow-lg absolute" style="z-index: 60; background-color: white;">
-                <input class="searchText px-6 py-2 text-black" style="width: 95%; border: 1px solid rgb(73, 71, 71)"
-                    type="text" id="inputBox" placeholder="Enter your search">
+            <div class="search-box shadow-2xl absolute bg-white" style="z-index: 60;">
+                <input class="searchText px-2 py-2 text-black ml-1"
+                    style="width: 95%; border: 1px solid rgb(185, 180, 180)" type="text" id="inputBox"
+                    placeholder="Enter your search">
             </div>
         </div>
 
         <script>
             window.addEventListener('DOMContentLoaded', () => {
                 const cartDisplay = document.querySelector('#cart-display')
-                const cartShow1 = document.getElementById('cart-btn1')
-                const cartShow2 = document.getElementById('cart-btn2')
+                const cartShow = document.getElementById('cart-btn')
 
                 const searchDisplay = document.querySelector('#search-display')
-                const openSearch1 = document.getElementById('search-btn1')
-                const openSearch2 = document.getElementById('search-btn2')
+                const openSearch = document.getElementById('search-btn')
 
                 console.log('clicke2');
 
                 /* For Cart Item */
-                cartShow1.addEventListener('mouseenter', () => {
+                cartShow.addEventListener('mouseenter', () => {
                     cartDisplay.classList.remove('hidden')
                     cartDisplay.classList.add('flex')
                 })
 
-                cartShow2.addEventListener('mouseenter', () => {
-                    cartDisplay.classList.remove('hidden')
-                    cartDisplay.classList.add('flex')
-                })
-
-                cartShow1.addEventListener('mouseleave', () => {
+                cartShow.addEventListener('click', () => {
                     cartDisplay.classList.remove('flex')
                     cartDisplay.classList.add('hidden')
                 })
 
-                cartShow2.addEventListener('mouseleave', () => {
-                    cartDisplay.classList.remove('flex')
-                    cartDisplay.classList.add('hidden')
-                })
-
-                cartShow1.addEventListener('click', () => {
+                /* cartShow.addEventListener('click', () => {
                     cartDisplay.classList.remove('hidden')
                     cartDisplay.classList.add('flex')
-                })
-
-                cartShow2.addEventListener('click', () => {
-                    cartDisplay.classList.remove('hidden')
-                    cartDisplay.classList.add('flex')
-                })
+                }) */
 
                 /* For Search Box*/
-                openSearch1.addEventListener('mouseenter', () => {
+                openSearch.addEventListener('mouseenter', () => {
                     searchDisplay.classList.remove('hidden')
                     searchDisplay.classList.add('flex')
                 })
 
-                openSearch2.addEventListener('mouseenter', () => {
-                    searchDisplay.classList.remove('hidden')
-                    searchDisplay.classList.add('flex')
-                })
-
-                openSearch1.addEventListener('mouseleave', () => {
-                    searchDisplay.classList.remove('flex')
-                    searchDisplay.classList.add('hidden')
-                })
-
-                openSearch2.addEventListener('mouseleave', () => {
+                openSearch.addEventListener('click', () => {
                     searchDisplay.classList.remove('flex')
                     searchDisplay.classList.add('hidden')
                 })
@@ -250,7 +224,7 @@
         </script>
 
         <!-- Second TopBar -->
-        <div class="container mx-auto items-center">
+        <div class="2xl:px-36 container mx-auto items-center">
             <div
                 class="grid md:grid-cols-2 sm:grid-cols-1 gap-4 md:px-14 md:py-2 py-5 md:justify-items-start justify-items-center">
                 <div class="logo py-2">
@@ -292,13 +266,13 @@
         <!-- Start Navbar Section -->
         <nav id='nav-height' class="sticky top-0 z-50 bg-[#202C45] navbar md:h-16"
             style='border-bottom:1px solid #F2184F;'>
-            <div class="container mx-auto items-center">
+            <div class="2xl:px-36 container mx-auto items-center">
                 <div class="grid lg:grid-cols-2 grid-cols-1 md:px-12">
-                    <div class="flex items-center nav-content lg:mt-1 mt-4">
+                    <div class="flex items-center nav-content lg:-mt-1 md:mt-4">
                         <ul class="">
                             <li>
-                                <a href="#home"
-                                    class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium"
+                                <a href="#home" class="text-gray-300
+                                hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium active"
                                     aria-current="page">Home</a>
                             </li>
 
@@ -337,7 +311,7 @@
                 </div>
 
                 <div id="open-mobile-nav" class="">
-                    <label for='check' class='checkbtn text-2xl text-white md:hidden block pr-2'>
+                    <label for='check' class='checkbtn text-2xl text-gray-500 md:hidden block pr-2 mt-3 mr-3'>
                         <i class="fas fa-bars"></i>
                     </label>
                 </div>
@@ -399,7 +373,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides 1-->
                     <div class="swiper-slide" style="background-image: url(img/bg-1.jpg);">
-                        <div class="container mx-auto">
+                        <div class="2xl:px-36 container mx-auto">
                             <div class="text-center text-white">
                                 <p class="lg:text-2xl md: text-xl rounded-full md:w-2/5 w-3/5 mx-auto py-2 lg:text-2xl md:text-xl text-xs"
                                     style='background-color: #000000a6; border-left: 4px solid #F2184F; border-right: 4px solid #F2184F; font-family: Raleway;'>
@@ -429,8 +403,8 @@
 
                     <!-- Slides 2-->
                     <div class="swiper-slide" style="background-image: url(img/bg-2.jpg);">
-                        <div class="container">
-                            <div class="text-center text-white relative mb-64">
+                        <div class="2xl:px-36 container mx-auto">
+                            <div class="text-center text-white relative mb-64 2xl:mr-12">
                                 <p class="lg:text-5xl md:text-6xl text-4xl lg:w-3/5 md:w-4/5 absolute right-0 py-2"
                                     style='background-color: #000000a6; border-right: 4px solid #F2184F; font-family: Raleway'>
                                     BEST EDUCATION</p>
@@ -465,8 +439,8 @@
 
                     <!-- Slides 3 -->
                     <div class="swiper-slide" style="background-image: url(img/bg-3.jpg);">
-                        <div class="container mx-auto">
-                            <div class="text-center text-white relative container">
+                        <div class="2xl:px-36 container mx-auto">
+                            <div class="text-center text-white relative 2xl:ml-12">
                                 <p class="lg:text-2xl md:text-8xl md:w-3/4 w-4/5 py-2 text-5xl"
                                     style='background-color: #000000a6; border-left: 4px solid #F2184F; font-family:Raleway'>
                                     EDUCATION</p>
@@ -505,10 +479,10 @@
         <script>
             var swiper = new Swiper('.swiper', {
                 // Optional parameters
-                /* autoplay: {
+                autoplay: {
                     delay: 2500,
                     disableOnInteraction: false,
-                }, */
+                },
                 // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
@@ -528,32 +502,25 @@
         </script>
 
         <!-- Start About section -->
-        <section id='about' class='container mx-auto '>
-            <h1 class='text-center font-bold mt-10 pt-20 text-2xl text-gray-600'></h1>
-
+        <section id='about' class='container mx-auto 2xl:px-36 py-[70px]'>
             <div class="container grid lg:grid-cols-2 md:grid-cols-1 md:mx-auto mx-0">
-                <div class="about" style="padding: 0px 15px">
+                <div class="about lg:px-12 md:px-5 px-3 lg:mb-0 mb-[30px]">
                     <p class="text-gray-400 font-normal" style='font-size: 12px; color: #A9A9A9; letter-spacing: 6px;'>
                         ALL ABOUT</p>
-                    <h2 class='font-semibold lg:w-4/5 w-full lg:text-4xl md:text-2xl text-2xl'
+                    <h2 class='font-semibold xl:w-full lg:w-4/5 w-full lg:text-3xl md:text-2xl text-xl'
                         style='color: #333333; margin: 0px 0px 30px; padding: 0px 0px 10px'>THE
                         WORLD'S
                         BEST EDUCATION
                         IN OUR UNIVERSITY
-                        <hr class='w-1/12' style='color: red'>
+                        <hr class='xl:w-1/12 md:w-[48px] w-[48px] text-[#F2184F] mt-3'>
                     </h2>
-                    <p class='my-5' style='font-size: 18px; color: #202C45'>We are Developer. An online learning
+                    <p class='text-[#161f33] text-[18px]'>We are Developer. An online learning
                         community. We make awesome awesome website for our company.</p>
-                    <p class='' style='color: #666666; font-size: 14px; margin: 0px 0px 10px'>Here, we believe
-                        everyone should
-                        have the opportunity to create progress through technology and
-                        develop
-                        the skills of
+                    <p class='' style='color: #666666; font-size: 14px; margin: 0px 0px 10px'>Here, we believe everyone
+                        should have the opportunity to create progress through technology and develop the skills of
                         tomorrow. With assessments, learning paths and courses authored by industry experts. Here, we
-                        believe
-                        everyone should have the opportunity to create progress through technology and develop
-                        the skills of
-                        tomorrow. With assessments, learning paths and courses authored by industry experts.
+                        believe everyone should have the opportunity to create progress through technology and develop
+                        the skills of tomorrow.
                     </p>
 
                     <button class=""
@@ -573,11 +540,11 @@
         </section>
 
         <!-- Start course section -->
-        <section id="courses" class='py-10 mt-20 bg-slate-100'>
-            <div class="container mx-auto lg:px-12 md:px-2">
-                <div class="px-5">
-                    <h1 class='' style='font-size:24px;'>OUR <span style="color: red">COURSES</span></h1>
-                    <hr class='w-1/12' style='color: red'>
+        <section id="courses" class=' bg-slate-100'>
+            <div class="container mx-auto 2xl:px-48 lg:px-12 px-4 py-[70px]">
+                <div class="">
+                    <h1 class='2xl:text-4xl md:text-3xl text-xl'>OUR <span style="color: red">COURSES</span></h1>
+                    <hr class='2xl:w-[55px] lg:w-[48px] w-[62px] text-[#F2184F]'>
                 </div>
 
                 <div class="carousel mx-auto">
@@ -591,11 +558,12 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl" style='font-size: 18px; color:#333333'>
+                                            <div class="md:text-xl text-sm" style='color:#333333'>
                                                 Electrical
                                                 &
-                                                Electronic</div>
-                                            <hr class='w-1/4 pb-7 lg:pb-0' style='color: red'>
+                                                Electronic
+                                            </div>
+                                            <hr class='w-1/4 pb-3 md:pb-0 text-[#F2184F]'>
 
                                             <div class="md:block hidden">
                                                 <p class="text-gray-700 text-base"
@@ -618,9 +586,10 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -635,21 +604,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl" style='font-size: 18px; color:#333333'>
-                                                Chemical
-                                                Engineering</div>
-                                            <hr class='w-1/4 pb-7 lg:pb-0' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Chemical Engineering
+                                            </div>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -665,21 +648,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl md:py-0 py-2" style='font-size: 18px; color:#333333'>
-                                                Accounting
-                                                Technologies</div>
-                                            <hr class='w-1/4' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Accounting Technologies
+                                            </div>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -694,21 +691,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl md:py-0 py-2" style='font-size: 18px; color:#333333'>
-                                                Computer
-                                                Technologies</div>
-                                            <hr class='w-1/4' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Computer Technologies
+                                            </div>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -723,22 +734,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl md:py-0 py-5" style='font-size: 18px; color:#333333'>
-                                                Development
-                                                Studies
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Development Studies
                                             </div>
-                                            <hr class='w-1/4 pb-7 lg:pb-0' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -753,21 +777,37 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl" style='font-size: 18px; color:#333333'>Electrical
+                                            <div class="md:text-xl text-sm" style='color:#333333'>
+                                                Electrical
                                                 &
-                                                Electronic</div>
-                                            <hr class='w-1/4 pb-7 lg:pb-0' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                                Electronic
+                                            </div>
+                                            <hr class='w-1/4 pb-3 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -782,20 +822,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl" style='font-size: 18px; color:#333333'>Chemical
-                                                Engineering</div>
-                                            <hr class='w-1/4 pb-7 lg:pb-0' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Chemical Engineering
+                                            </div>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -810,21 +865,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl md:py-0 py-2" style='font-size: 18px; color:#333333'>
-                                                Accounting
-                                                Technologies</div>
-                                            <hr class='w-1/4' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Accounting Technologies
+                                            </div>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -839,21 +908,35 @@
                                         alt="Sunset in the mountains">
                                     <div class="bg-white">
                                         <div class="px-6 py-4">
-                                            <div class="text-xl md:py-0 py-2" style='font-size: 18px; color:#333333'>
-                                                Computer
-                                                Technologies</div>
-                                            <hr class='w-1/4' style='color: red'>
-                                            <p class="text-gray-700 text-base" style="font-size: 14px; color: #666666">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                                                quia,
-                                                nulla! Maiores
-                                                et perferendis
-                                                eaque, exercitationem praesentium nihil.
-                                            </p>
+                                            <div class="md:text-xl text-base" style='color:#333333'>
+                                                Computer Technologies
+                                            </div>
+                                            <hr class='w-1/4 pb-6 md:pb-0 text-[#F2184F]'>
+                                            <div class="md:block hidden">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia,
+                                                    nulla! Maiores
+                                                    et perferendis
+                                                    eaque, exercitationem praesentium nihil.
+                                                </p>
+                                            </div>
+
+                                            <div class="md:hidden block">
+                                                <p class="text-gray-700 text-base"
+                                                    style="font-size: 14px; color: #666666">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Voluptatibus
+                                                    quia...
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="px-6 pt-4 pb-5">
-                                            <button class="hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-                                                style="background-color: #202C45; color: white; font-size: 12px; font-weight: 400">
+                                        <div class="md:px-6 pt-4 pb-5 text-center">
+                                            <button
+                                                class="hover:bg-blue-900 text-white font-bold py-2 md:px-4 px-1 rounded md:text-base text-sm"
+                                                style="background-color: #202C45; color: white; font-weight: 400">
                                                 VIEW DETAILS
                                             </button>
                                         </div>
@@ -891,8 +974,8 @@
         </section>
 
         <!-- Start Review Section -->
-        <section id='review' class="review bg-[#202C45]">
-            <div class="w-4/6 rounded overflow-hidden shadow-lg mx-auto">
+        <section id='review' class="review bg-[#202C45E6] 2xl:py-20 xl:py-12 lg:py-16 md:py-10">
+            <div class="w-4/6 rounded overflow-hidden mx-auto">
                 <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
                     <div class='text-center mt-10'>
                         <div class="text-center text-5xl text-[#F2184F]">
@@ -946,13 +1029,14 @@
         </section>
 
         <!-- Start Teacher's Section -->
-        <section id="teacher" class='py-10 mt-20'>
-            <div class="container mx-auto lg:px-12 md:px-2">
-                <div class="px-5">
-                    <h1 class='' style='font-size:24px;'>OUR <span style="color: red">TEACHER</span></h1>
-                    <hr class='w-1/12' style='color: red'>
+        <section id="teacher" class=''>
+            <div class="container mx-auto 2xl:px-48 lg:px-12 px-4 py-[70px]">
+                <div class="">
+                    <h1 class='2xl:text-4xl md:text-3xl text-xl'>OUR <span class='text-[#F2184F]'>TEACHER</span></h1>
+                    <hr class='2xl:w-[55px] lg:w-[48px] w-[62px] mb-[30px] text-[#F2184F]'>
                     <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                        <div
+                            class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3 border-b-2 border-[#F2184F]">
                             <img class="w-full"
                                 src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/team/team5.jpg"
                                 alt="Sunset in the mountains">
@@ -994,7 +1078,8 @@
                             </div>
                         </div>
 
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                        <div
+                            class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3 border-b-2 border-[#F2184F]">
                             <img class="w-full"
                                 src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/team/team6.jpg"
                                 alt="Sunset in the mountains">
@@ -1036,7 +1121,8 @@
                             </div>
                         </div>
 
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                        <div
+                            class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3 border-b-2 border-[#F2184F]">
                             <img class="w-full"
                                 src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/team/team7.jpg"
                                 alt="Sunset in the mountains">
@@ -1078,7 +1164,8 @@
                             </div>
                         </div>
 
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3">
+                        <div
+                            class="max-w-sm rounded overflow-hidden shadow-lg mx-auto text-left my-3 border-b-2 border-[#F2184F]">
                             <img class="w-full"
                                 src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/team/team8.jpg"
                                 alt="Sunset in the mountains">
@@ -1121,6 +1208,535 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+
+        <!-- Start Gallery Section -->
+        <section id="gallery" class="gallery bg-[#F7F7F7]">
+            <div class="container mx-auto 2xl:px-48 lg:px-12 px-4 py-[70px]">
+                <div class=''>
+                    <h1 class='2xl:text-4xl md:text-3xl text-xl'>OUR <span class='text-[#F2184F]'>GALLERY</span></h1>
+                    <hr class='2xl:w-[55px] lg:w-[48px] w-[62px] mb-[30px] text-[#F2184F]'>
+
+                    <div class="container">
+                        <div class="item-menu gallery items-center lg:-mt-1 md:mt-4">
+                            <ul class="flex">
+                                <li class='active' data-filter="*">
+                                    <div class="text-gray-300
+                                                                                        hover:bg-white hover:text-gray-700 pr-3 py-2 rounded-full text-sm font-medium active"
+                                        aria-current="page">
+                                        <button
+                                            class="hover:bg-slate-600 text-white font-semibold hover:text-white py-1 px-4 hover:border-transparent md:text-base text-sm font-normal bg-[#202C45]"
+                                            style='border-left: 4px solid #F2184F;'>
+                                            All
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li data-filter=".photos">
+                                    <div
+                                        class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">
+                                        <button
+                                            class="hover:bg-slate-600 text-white font-semibold hover:text-white py-1 px-4 hover:border-transparent md:text-base text-sm font-normal bg-[#202C45]"
+                                            style='border-left: 4px solid #F2184F;'>
+                                            Photos
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li data-filter=".campus">
+                                    <div
+                                        class="text-gray-300 hover:bg-white hover:text-gray-700 px-3 py-2 rounded-full text-sm font-medium">
+                                        <button
+                                            class="hover:bg-slate-600 text-white font-semibold hover:text-white py-1 px-4 hover:border-transparent md:text-base text-sm font-normal bg-[#202C45]"
+                                            style='border-left: 4px solid #F2184F;'>
+                                            Campus
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li data-filter=".student">
+                                    <div
+                                        class="text-gray-300 hover:bg-white hover:text-gray-700 pl-3 py-2 rounded-full text-sm font-medium">
+                                        <button
+                                            class="hover:bg-slate-600 text-white font-semibold hover:text-white py-1 px-4 hover:border-transparent md:text-base text-sm font-normal bg-[#202C45]"
+                                            style='border-left: 4px solid #F2184F;'>
+                                            Students
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="item-details grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-5 gap-4">
+                            <div class="item photos relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://www.thoughtco.com/thmb/ZX7i-LUzIsBb4LRkmOEckjut-E8=/3865x2576/filters:fill(auto,1)/teenage-students-in-classroom--141090063-5af498bc6bf0690036889c1b.jpg"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item campus relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://static.toiimg.com/thumb/msid-81481245,width-1200,height-900,resizemode-4/.jpg"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item student relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://www.thoughtco.com/thmb/OVJX6HV5E4MsBCf6aKv9OTyoxbw=/1777x1333/smart/filters:no_upscale()/GettyImages-141090015-5ad4786efa6bcc0036b494de.jpg"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item photos relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://www.educationworld.com/sites/default/files/teacherhelpingstudent_story.jpg"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item student relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://jameskennedymonash.files.wordpress.com/2015/03/students-in-classroom.jpg"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item student relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjsqcibL2dpxAsh9iVlBvkv1YNfYdSM2H7YxqtXbZIaavGOW4musmcAnN3mVFkxjStyY&usqp=CAU"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item student relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2bQ5aOLG27iDDoGt4yNphrNcQDIW2np4t7376QVAtxoqw0FurbxzWEFRZqMIsqvHVYRw&usqp=CAU"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item photos relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0h-R860FdNbCNQ9nC5vlUzXGjqRielwMIHabANqvFflQU9Xvxv8D64TWnX1YKLslcrOA&usqp=CAU"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item campus relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxHoEHPu2xGPmQsKek1bj42bBaU9x9kNAgAJbMN2I2hNRGW3lu8Dph4guLEAOgorKnR2o&usqp=CAU"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item campus relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH_LY1bvfqRoLzuJYgMzd9uzpY6_l3sQILbi27POJquAtOGZUufe_qlCeuihr4ElWt6Mc&usqp=CAU"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item campus relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://ichef.bbci.co.uk/news/976/cpsprodpb/10B7B/production/_107157486_students8.jpg"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="item photos relative single-item overflow-hidden">
+                                <img class='xl:h-[160px] xl:w-[280px] lg:h-[131.42px] lg:w-[230px] md:h-[134.27px] md:w-[234.98px] h-[222.84px] w-[390px] py-1 px-1'
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnPDsBHElhCm-bzo5CU8eErUBjz3zdSLb9yUjmXBbx-9NJ2lq5BjjkcP-s3OqWh5Rvk5E&usqp=CAU"
+                                    alt="">
+
+                                <div class="img-overlay absolute text-white top-100 left-0 flex">
+                                    <a href="#"><i class="fas fa-plus-circle mx-2"></i></a>
+                                    <a href="#"><i class="fas fa-link mx-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/jquery-3.5.1.slim.min.js"></script>
+            <script src="js/isotope.min.js"></script>
+            <script>
+                // init Isotope
+                var $grid = $('.item-details').isotope({
+                    // options
+                });
+                // filter items on button click
+                $('.item-menu').on('click', 'li', function () {
+                    var filterValue = $(this).attr('data-filter');
+                    $grid.isotope({ filter: filterValue });
+                });
+            </script>
+        </section>
+
+        <!-- Start Gallery Section -->
+        <section id='' class='container mx-auto 2xl:px-36 py-[70px]'>
+            <div class="container grid lg:grid-cols-2 md:grid-cols-1 md:mx-auto mx-0 text-2xl">
+                <div class="events lg:px-12 md:px-5 px-3 lg:mb-0 mb-[30px]">
+                    <h3><i class="fas fa-calendar-alt mr-2"></i>UPCOMING <span class="text-[#F2184F]">EVENTS</span></h3>
+                    <hr class='2xl:w-[55px] lg:w-[48px] w-[62px] mb-[30px] text-[#F2184F] mt-[10px]'>
+
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="col-span-1">
+                            <img src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/event/1.jpg" alt="">
+                        </div>
+                        <div class="col-span-3 text-[#666666]" style="margin-top:-10px;">
+                            <a href="#">
+                                <h3 class="text-[18px] text-[#333333]">Upcoming Event Title</h3>
+                            </a>
+                            <ul class="flex text-[12px]">
+                                <li><i class="fas fa-calendar-alt mr-2"></i>June 26, 2016<span class="mx-2">|</span>
+                                </li>
+                                <li><i class="fas fa-map-marker-alt mr-2"></i>New Your</li>
+                            </ul>
+                            <p class="text-[13px]" style="line-height: 1.5;">Lorem, ipsum dolor sit
+                                amet consectetur
+                                adipisicing elit.Quas eveniet, nemo dicta. Ullam nam.</p>
+                            <a class="text-[13px] text-[#202C45]" href="#">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-4 my-2">
+                        <div class="col-span-1">
+                            <img src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/event/2.jpg" alt="">
+                        </div>
+                        <div class="col-span-3 text-[#666666]" style="margin-top:-10px;">
+                            <a href="#">
+                                <h3 class="text-[18px] text-[#333333]">Upcoming Event Title</h3>
+                            </a>
+                            <ul class="flex text-[12px]">
+                                <li><i class="fas fa-calendar-alt mr-2"></i>June 26, 2016<span class="mx-2">|</span>
+                                </li>
+                                <li><i class="fas fa-map-marker-alt mr-2"></i>New Your</li>
+                            </ul>
+                            <p class="text-[13px]" style="line-height: 1.5;">Lorem, ipsum dolor sit
+                                amet consectetur
+                                adipisicing elit.Quas eveniet, nemo dicta. Ullam nam.</p>
+                            <a class="text-[13px] text-[#202C45]" href="#">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="col-span-1">
+                            <img src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/event/3.jpg" alt="">
+                        </div>
+                        <div class="col-span-3 text-[#666666]" style="margin-top:-10px;">
+                            <a href="#">
+                                <h3 class="text-[18px] text-[#333333]">Upcoming Event Title</h3>
+                            </a>
+                            <ul class="flex text-[12px]">
+                                <li><i class="fas fa-calendar-alt mr-2"></i>June 26, 2016<span class="mx-2">|</span>
+                                </li>
+                                <li><i class="fas fa-map-marker-alt mr-2"></i>New Your</li>
+                            </ul>
+                            <p class="text-[13px]" style="line-height: 1.5;">Lorem, ipsum dolor sit
+                                amet consectetur
+                                adipisicing elit.Quas eveniet, nemo dicta. Ullam nam.</p>
+                            <a class="text-[13px] text-[#202C45]" href="#">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="choose lg:px-12 md:px-5 px-3 lg:mb-0 mb-[30px]">
+                    <h3>Why <span class="text-[#F2184F]">Choose Us?</span></h3>
+                    <hr class='2xl:w-[55px] lg:w-[48px] w-[62px] mb-[30px] text-[#F2184F] mt-[10px]'>
+
+                    <p class="text-[14px] text-[#666666] mb-4" style="line-height: 1.5;">The Cweren Law Firm is a
+                        recognized
+                        leader in landlord tenant representation throughout Texas.The largest professional
+                        property.</p>
+
+                    <div class="accordion">
+                        <div id='contentBox1' class="contentBox relative my-2">
+                            <div class="label relative bg-[#F8F8F8] text-[#202C45] cursor-pointer align-middle">
+                                Why this Company is Best?</div>
+                            <div class="content relative bg-[#FFFFFF]">
+                                <p class="text-[14px] text-[#666666]" style="line-height: 1.6;">
+                                    Lorem ipsum dolor
+                                    sit
+                                    amet, consectetur
+                                    adipisicing elit. Dolore impedit quae
+                                    repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum
+                                    deser unt vonsess. iure poss imusven am aliquam</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div id='contentBox2' class="contentBox relative my-2">
+                            <div class="label relative bg-[#F8F8F8] text-[#202C45] cursor-pointer align-middle">
+                                Why this Company is Best?</div>
+                            <div class="content relative bg-[#FFFFFF]">
+                                <p class="text-[14px] text-[#666666]" style="line-height: 1.6;">
+                                    Lorem ipsum dolor
+                                    sit
+                                    amet, consectetur
+                                    adipisicing elit. Dolore impedit quae
+                                    repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum
+                                    deser unt vonsess. iure poss imusven am aliquam</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div id='contentBox3' class="contentBox relative my-2">
+                            <div class="label relative bg-[#F8F8F8] text-[#202C45] cursor-pointer align-middle">
+                                Why this Company is Best?</div>
+                            <div class="content relative bg-[#FFFFFF]">
+                                <p class="text-[14px] text-[#666666]" style="line-height: 1.6;">
+                                    Lorem ipsum dolor
+                                    sit
+                                    amet, consectetur
+                                    adipisicing elit. Dolore impedit quae
+                                    repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum
+                                    deser unt vonsess. iure poss imusven am aliquam</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div id='contentBox4' class="contentBox relative my-2">
+                            <div class="label relative bg-[#F8F8F8] text-[#202C45] cursor-pointer align-middle">
+                                Why this Company is Best?</div>
+                            <div class="content relative bg-[#FFFFFF]">
+                                <p class="text-[14px] text-[#666666]" style="line-height: 1.6;">
+                                    Lorem ipsum dolor
+                                    sit
+                                    amet, consectetur
+                                    adipisicing elit. Dolore impedit quae
+                                    repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum
+                                    deser unt vonsess. iure poss imusven am aliquam</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div id='contentBox5' class="contentBox relative my-2">
+                            <div class="label relative bg-[#F8F8F8] text-[#202C45] cursor-pointer align-middle">
+                                Why this Company is Best?</div>
+                            <div class="content relative bg-[#FFFFFF]">
+                                <p class="text-[14px] text-[#666666]" style="line-height: 1.6;">
+                                    Lorem ipsum dolor
+                                    sit
+                                    amet, consectetur
+                                    adipisicing elit. Dolore impedit quae
+                                    repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum
+                                    deser unt vonsess. iure poss imusven am aliquam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    /* window.addEventListener('DOMContentLoaded', () => {
+                        const showAcrdn1 = document.getElementById('contentBox1');
+                        const showAcrdn2 = document.getElementById('contentBox2');
+                        const showAcrdn3 = document.getElementById('contentBox3');
+                        const showAcrdn4 = document.getElementById('contentBox4');
+                        const showAcrdn5 = document.getElementById('contentBox5');
+
+                        showAcrdn1.addEventListener('click', () => {
+                            showAcrdn1.classList.toggle('active');
+                        })
+
+                        showAcrdn2.addEventListener('click', () => {
+                            showAcrdn2.classList.toggle('active');
+                        })
+
+                        showAcrdn3.addEventListener('click', () => {
+                            showAcrdn3.classList.toggle('active');
+                        })
+
+                        showAcrdn4.addEventListener('click', () => {
+                            showAcrdn4.classList.toggle('active');
+                        })
+
+                        showAcrdn5.addEventListener('click', () => {
+                            showAcrdn5.classList.toggle('active');
+                        })
+                    }) */
+
+                    const accordion = document.getElementsByClassName("contentBox");
+
+                    for (i = 0; i < accordion.length; i++) {
+                        accordion[i].addEventListener('click', function () {
+                            this.classList.toggle('active')
+                        })
+                    }
+                </script>
+            </div>
+        </section>
+
+        <!-- Start Footer Section -->
+        <section id='' class='bg-[#111111E6]'>
+            <div
+                class="container mx-auto 2xl:px-36 py-[70px] grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:mx-auto mx-0 text-2xl">
+                <div class="address lg:pl-12 md:pl-5 px-3 lg:mb-0 mb-[30px]">
+                    <img src="http://html.kodesolution.live/s/studypress/v6.0/demo/images/logo-white-footer.png" alt="">
+                    <p class='text-[14px] text-[#666666]'>203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
+
+                    <ul>
+                        <li class="text-[#F2184F] text-sm">
+                            <i class="fas fa-phone-alt mr-2"></i><a class="text-[#808080]" href="">123-456-789</a>
+                        </li>
+                        <li class="text-[#F2184F] text-sm">
+                            <i class="far fa-envelope mr-2"></i><a class="text-[#808080]"
+                                href="">contact@yourdomain.com</a>
+                        </li>
+                        <li class="text-[#F2184F] text-sm">
+                            <i class="fas fa-globe-americas mr-2"></i><a class="text-[#808080]"
+                                href="">www.yourdomain.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="links lg:px-8 md:px-3 px-3 lg:mb-0 mb-[30px]">
+                    <h4 class="text-[18px] text-white">Useful Links</h4>
+
+                    <ul>
+                        <li class="my-2 text-[14px] text-[#808080] ml-4" style="list-style-type: none;">About Us</li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+                        <li class="my-2 text-[14px] text-[#808080] ml-4" style="list-style-type: none;">Our Courses</li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+                        <li class="my-2 text-[14px] text-[#808080] ml-4" style="list-style-type: none;">Pricing Table
+                        </li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+                        <li class="my-2 text-[14px] text-[#808080] ml-4" style="list-style-type: none;">Gallery</li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+                        <li class="my-2 text-[14px] text-[#808080] ml-4" style="list-style-type: none;">Shop</li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+                    </ul>
+                </div>
+
+                <div class="feed lg:pr-5 md:px-3 px-3 lg:mb-0 mb-[30px]">
+                    <h4 class="text-[18px] text-white">Twitter Feed</h4>
+
+                    <ul>
+                        <li class="text-[#F2184F] text-xl">
+                            <i class="fab fa-twitter"></i>
+                            <p class="text-[#666666] text-[13px] inline">
+                                It’s safe to say this year has flown by, which means only one thing—the holiday
+                                season is here! One
+                                thing we know i…<a class="text-[#808080]" href="https://t.co/ET0EDw3T3O" target="_blank"
+                                    title="Visit this link">https://t.co/ET0EDw3T3O</a>
+                            </p>
+                            <div class="text-[#666666] text-[12px]">Dec. 14, 2021</div>
+                        </li>
+
+                        <li class="text-[#F2184F] text-xl">
+                            <i class="fab fa-twitter"></i>
+                            <p class="text-[#666666] text-[13px] inline">
+                                RT <a href="https://twitter.com/aronvisuals" target="_blank"
+                                    title="aronvisuals on Twitter">@aronvisuals</a>: SOUL
+                                STELLARIUM''There’s a light, where the darkness ends, touch me now and let me see
+                                again.'' © 2021 ARON VISUALS All…
+                            </p>
+                            <div class="text-[#666666] text-[12px]">Dec. 13, 2021</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="office-time lg:pr-12 md:pr-5 px-3 lg:mb-0 mb-[30px]">
+                    <h4 class="text-[18px] text-white">Opening Hours</h4>
+
+                    <ul>
+                        <li class="my-2 text-[14px] text-[#808080] ml-4 flex justify-between"
+                            style="list-style-type: none;">
+                            <div class="">
+                                Mon-Tues:
+                            </div>
+                            <div class="">6.00 am - 10.00 pm</div>
+                        </li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+
+                        <li class="my-2 text-[14px] text-[#808080] ml-4 flex justify-between"
+                            style="list-style-type: none;">
+                            <div class="">
+                                Wednes - Thurs:
+                            </div>
+                            <div class="">8.00 am - 6.00 pm</div>
+                        </li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+
+                        <li class="my-2 text-[14px] text-[#808080] ml-4 flex justify-between"
+                            style="list-style-type: none;">
+                            <div class="">
+                                Fri:
+                            </div>
+                            <div class="">3.00 pm - 8.00 pm</div>
+                        </li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+
+                        <li class="my-2 text-[14px] text-[#808080] ml-4 flex justify-between"
+                            style="list-style-type: none;">
+                            <div class="">
+                                Sun:
+                            </div>
+                            <div class="">Closed</div>
+                        </li>
+                        <hr class="" style="border-top: 1px dashed #666666" />
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright bg-[#1d1c1c] text-white text-sm text-center mx-auto">
+                Copyright ©2021 DevXHub. All Rights Reserved
             </div>
         </section>
     </div>

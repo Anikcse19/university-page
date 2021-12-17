@@ -5,19 +5,6 @@
   height: 700px;
 }
 
-.topBar {
-  background-color: #f2184f;
-}
-
-.topBar input {
-  display: flex;
-  justify-content: end;
-}
-/* 
-.search-icon {
-  position: absolute;
-} */
-
 .cart-box {
   background-color: white;
   padding: 30px 15px;
@@ -27,10 +14,14 @@
 }
 .search-box {
   background-color: white;
-  padding: 30px 15px 5px 15px;
+  padding: 30px 15px 0px 15px;
   margin-right: 100px;
   width: 320px;
-  height: 110px;
+  height: 100px;
+}
+
+.nav-content ul {
+  display: flex;
 }
 
 .nav-content a {
@@ -89,12 +80,135 @@
   object-fit: cover;
 }
 
-.nav-content ul {
-  display: flex;
+.single-item {
 }
 
-.checkbtn {
+.single-item:hover .img-overlay {
+  top: 0;
+}
+
+.img-overlay {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: 0.3s ease-in;
+}
+
+.img-overlay::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #333333;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.img-overlay i {
+  padding: 8px;
+  background-color: #202c45;
+  border-radius: 50px;
+}
+
+.img-overlay i:hover {
+  background-color: #151d30;
+}
+
+/* Styling For Accordion */
+.accordion .contentBox .label {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.accordion .contentBox.active .label {
+  background-color: #202c45;
+  color: white;
+  padding: 3px 15px 4px 0px;
+}
+
+.accordion .contentBox .label::before {
+  content: "+";
+  color: #888;
+  top: 50%;
+  padding: 10px 14px;
+  font-size: 28px;
+  font-weight: bold;
+  transform: translateY(-50%);
+}
+
+.accordion .contentBox .content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+  overflow-y: auto;
+}
+
+.accordion .contentBox.active .content {
+  border: 1px solid #e2d9d9db;
+  height: 130px;
+  padding: 10px 20px 20px;
+}
+
+.accordion .contentBox.active .label::before {
+  content: "-";
+  background-color: #f2184f;
+  color: white;
+  padding: 9px 16px;
+  padding-top: 0px;
+}
+
+/* Tab content - closed */
+.tab-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* Label formatting when open */
+.tab input:checked + label {
+  padding: 1.25rem;
+  border-left-width: 2px;
+  border-color: #202c45;
+  background-color: #202c45;
+  height: 44.8px;
+  color: #ffffff;
+}
+
+.tab input:checked + label i {
+  background-color: #f2184f;
+  color: white;
+  height: 44.8px;
+  align-items: center;
+}
+
+/* Icon */
+.tab label::after {
   float: right;
+}
+
+.tab input[type="radio"] + label::before {
+  content: "+";
+  font-weight: bold;
+  padding: 10px 14px;
+  color: #666666;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tab input[type="radio"] + label.active {
+  content: "-";
 }
 
 @media (min-width: 768px) {
