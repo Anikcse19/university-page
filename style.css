@@ -255,4 +255,30 @@
   .header-img {
     height: 350px;
   }
+
+  .header .swiper {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .header-img {
+    height: 300px;
+  }
+
+  .swiper-slide p {
+    font-size: 15px;
+  }
+
+  .swiper-slide p.description {
+    font-size: 9px;
+  }
+
+  .header .swiper {
+    height: 45vh;
+  }
+
+  .gallery button {
+    padding: 2px 8px;
+  }
 }

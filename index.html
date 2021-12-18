@@ -307,27 +307,19 @@
                     </div>
                 </div>
 
-                <div id="open-mobile-nav" class="">
-                    <label for='check' class='checkbtn text-2xl text-gray-500 md:hidden block pr-2 mt-3 mr-3'>
+                <div id="open-mobile-nav" class="h-14">
+                    <label for='check'
+                        class='checkbtn text-2xl text-gray-500 md:hidden block pr-2 mt-3 mr-3 float-right'>
                         <i class="fas fa-bars"></i>
                     </label>
                 </div>
-
-                <!-- <div class='text-white text-right px-5 menu-button text-2xl align-middle md:hidden block'>
-                    <i class="fas fa-bars align-middle"></i>
-                </div> -->
             </div>
 
             <div id='mobile-nav' class='md:hidden'>
-                <ul class="bg-white mt-8 mx-4 text-center">
-                    <li id='close-nav' class='text-right mr-10'>
-                        <button class="bg-[#202C45] text-white p-2 mt-3 rounded-md">
-                            X
-                        </button>
-                    </li>
-                    <li class='py-2'>Home</li>
+                <ul class="bg-white mx-4 text-center">
+                    <li id="#home" class='py-2'>Home</li>
                     <hr class='text-gray-200'>
-                    <li class='py-2'>About</li>
+                    <li id='#about' class='py-2'>About</li>
                     <hr class='text-gray-200'>
                     <li class='py-2'>Course</li>
                     <hr class='text-gray-200'>
@@ -345,19 +337,9 @@
             window.addEventListener('DOMContentLoaded', () => {
                 const navDisplay = document.querySelector('#open-mobile-nav')
                 const navShow = document.getElementById('mobile-nav')
-                const navHide = document.getElementById('close-nav')
-                const navHeight = document.getElementById('nav-height')
 
                 navDisplay.addEventListener('click', () => {
-                    navShow.classList.remove('hidden')
-                    navHeight.classList.remove('h-14')
-                    navHeight.classList.add('h-50')
-                })
-
-                navHide.addEventListener('click', () => {
-                    navShow.classList.add('hidden')
-                    navHeight.classList.remove('h-50')
-                    navHeight.classList.add('h-14')
+                    navShow.classList.toggle('hidden')
                 })
             })
         </script>
@@ -379,7 +361,7 @@
                                 <p class="lg:text-4xl font-bold rounded-full lg:w-3/5 md:w-1/2 w-4/5 mx-auto my-4 py-3 md:text-2xl text-sm"
                                     style='background-color: #202c45b7; font-family: Raleway;'>WORLD' S BEST UNIVERSITY
                                 </p>
-                                <p class="md:w-2/3 mx-auto font-medium md:text-lg text-sm">We
+                                <p class="md:w-2/3 mx-auto font-medium md:text-lg text-sm description">We
                                     provides
                                     always our best services for our
                                     clients and
@@ -410,7 +392,7 @@
                                     FOR YOUR BETTER FUTURE
                                 </p>
                                 <p
-                                    class="text-xs md:w-2/3  font-medium absolute right-0 text-right lg:mt-40 md:mt-36 mt-28">
+                                    class="text-xs md:w-2/3  font-medium absolute right-0 text-right lg:mt-40 md:mt-36 mt-28 description">
                                     We
                                     provides
                                     always
@@ -445,7 +427,8 @@
                                     style='background-color: #202c45b7; font-family: Raleway'>
                                     EDUCATION FOR EVERYONE
                                 </p>
-                                <p class="text-xs md:text-sm w-3/4 font-medium text-left mt-5 md:mt-2">We provides
+                                <p class="text-xs md:text-sm w-3/4 font-medium text-left mt-5 md:mt-2 description">We
+                                    provides
                                     always
                                     our best
                                     services
