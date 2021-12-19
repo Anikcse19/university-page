@@ -22,16 +22,80 @@
 
 .nav-content ul {
   display: flex;
+  margin-top: -3px;
 }
 
-.nav-content a {
+.nav-content ul li {
+  margin-top: 7px;
+  margin-left: 2px;
+}
+
+.nav-content ul li.active {
+  padding: 4px 10px;
+  border-radius: 15px;
+  margin-top: 4px;
+  padding-bottom: 5px;
+}
+
+.nav-content ul li.active a {
+  color: black;
+}
+
+.nav-content ul li a {
   font-family: OpenSans;
   font-size: 13px;
+  padding: 4px 10px;
+  transition: 0.5s;
 }
 
-.nav-content a:active {
-  background-color: #f4f6fa;
-  color: #202c45;
+.nav-content ul li a:hover {
+  background-color: #ffffff;
+  color: black;
+  padding: 7px 10px;
+  border-radius: 15px;
+}
+
+.nav-content ul li.slide {
+  position: absolute;
+  width: 71.78px;
+  height: 30px;
+  background: white;
+  padding: 7px 10px;
+  border-radius: 15px;
+  z-index: -1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.nav-content ul li:nth-child(1).active ~ .slide {
+  left: 375px;
+  opacity: 1;
+}
+
+.nav-content ul li:nth-child(2).active ~ .slide {
+  left: 430px;
+  opacity: 1;
+}
+
+.nav-content ul li:nth-child(3).active ~ .slide {
+  left: 488px;
+  opacity: 1;
+}
+
+.nav-content ul li:nth-child(4).active ~ .slide {
+  left: 552px;
+  opacity: 1;
+}
+
+.nav-content ul li:nth-child(5).active ~ .slide {
+  left: 614px;
+  opacity: 1;
+}
+
+.nav-content ul li:nth-child(6).active ~ .slide {
+  left: 681px;
+  opacity: 1;
+  width: 47.78px;
 }
 
 .menu-button {
